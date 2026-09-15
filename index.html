@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde cerca | Cuidado de plantas</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="hero">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>Tu pequeño ritual verde</div>
+            <h1>Cuidado de plantas<span>.</span></h1>
+            <p class="hero-copy">Un rincón simple para recordar cuándo tu jungla necesita un poco de cariño.</p>
+        </header>
+
+        <div class="dashboard">
+            <section class="panel add-panel" aria-labelledby="add-title">
+                <div class="section-heading">
+                    <div class="section-icon">✦</div>
+                    <div>
+                        <p class="section-kicker">Nueva compañera</p>
+                        <h2 id="add-title">Agregar plantita</h2>
+                    </div>
+                </div>
+                <form action="" id="formPlanta">
+                    <label for="nombre">Nombre de tu planta</label>
+                    <input type="text" id="nombre" placeholder="Ej: Pandurata" required>
+
+                    <label for="frecuencia">Frecuencia de riego <span>(días)</span></label>
+                    <input type="number" id="frecuencia" placeholder="Ej: 5" min="1" required>
+
+                    <button class="primary-button" type="submit"><span>+</span> Agregar planta</button>
+                </form>
+                <p class="form-note">Podés actualizar el riego desde cada tarjeta.</p>
+            </section>
+
+            <section class="plants-section" aria-labelledby="plants-title">
+                <div class="plants-heading">
+                    <div>
+                        <p class="section-kicker">Tu colección</p>
+                        <h2 id="plants-title">Mis plantas</h2>
+                    </div>
+                    <span class="plant-count" id="plantCount">0</span>
+                </div>
+                <div id="listaPlantas" class="plants-grid"></div>
+            </section>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
